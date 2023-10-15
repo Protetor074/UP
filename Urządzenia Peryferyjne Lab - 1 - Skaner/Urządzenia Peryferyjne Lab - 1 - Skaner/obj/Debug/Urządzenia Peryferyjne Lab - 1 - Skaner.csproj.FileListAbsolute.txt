@@ -1,0 +1,11 @@
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\bin\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.exe.config
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\bin\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.exe
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\bin\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.pdb
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.csproj.AssemblyReference.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.csproj.SuggestedBindingRedirects.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia_Peryferyjne_Lab___1___Skaner.Properties.Resources.resources
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.csproj.GenerateResource.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.csproj.CoreCompileInputs.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.exe
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Skaner.pdb
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 1 - Skaner\Urządzenia Peryferyjne Lab - 1 - Skaner\obj\Debug\Urządzenia_Peryferyjne_Lab___1___Skaner.SkaningMode.resources
