@@ -44,12 +44,15 @@
             this.labelResolutionWidth = new System.Windows.Forms.Label();
             this.numericResolutionHeight = new System.Windows.Forms.NumericUpDown();
             this.numericResolutionWidth = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelScaningType = new System.Windows.Forms.Label();
             this.domainScaningSelector = new System.Windows.Forms.DomainUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelSaveFileType = new System.Windows.Forms.Label();
             this.domainFormatSelector = new System.Windows.Forms.DomainUpDown();
+            this.pictureBoxScan = new System.Windows.Forms.PictureBox();
+            this.folderBrowserSavingFile = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionWidth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScan)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonScan
@@ -60,6 +63,7 @@
             this.buttonScan.TabIndex = 0;
             this.buttonScan.Text = "Skanuj";
             this.buttonScan.UseVisualStyleBackColor = true;
+            this.buttonScan.Click += new System.EventHandler(this.buttonScan_Click);
             // 
             // buttonRL_180
             // 
@@ -69,6 +73,7 @@
             this.buttonRL_180.TabIndex = 5;
             this.buttonRL_180.Text = "180°";
             this.buttonRL_180.UseVisualStyleBackColor = true;
+            this.buttonRL_180.Click += new System.EventHandler(this.buttonRL_180_Click);
             // 
             // labelRotationLeft
             // 
@@ -96,6 +101,7 @@
             this.buttonRL_90.TabIndex = 9;
             this.buttonRL_90.Text = "90°";
             this.buttonRL_90.UseVisualStyleBackColor = true;
+            this.buttonRL_90.Click += new System.EventHandler(this.buttonRL_90_Click);
             // 
             // buttonRL_270
             // 
@@ -105,6 +111,7 @@
             this.buttonRL_270.TabIndex = 10;
             this.buttonRL_270.Text = "270°";
             this.buttonRL_270.UseVisualStyleBackColor = true;
+            this.buttonRL_270.Click += new System.EventHandler(this.buttonRL_270_Click);
             // 
             // buttonRR_90
             // 
@@ -114,6 +121,7 @@
             this.buttonRR_90.TabIndex = 11;
             this.buttonRR_90.Text = "90°";
             this.buttonRR_90.UseVisualStyleBackColor = true;
+            this.buttonRR_90.Click += new System.EventHandler(this.buttonRR_90_Click);
             // 
             // buttonRR_180
             // 
@@ -123,6 +131,7 @@
             this.buttonRR_180.TabIndex = 12;
             this.buttonRR_180.Text = "180°";
             this.buttonRR_180.UseVisualStyleBackColor = true;
+            this.buttonRR_180.Click += new System.EventHandler(this.buttonRR_180_Click);
             // 
             // buttonRR_270
             // 
@@ -132,6 +141,7 @@
             this.buttonRR_270.TabIndex = 13;
             this.buttonRR_270.Text = "270°";
             this.buttonRR_270.UseVisualStyleBackColor = true;
+            this.buttonRR_270.Click += new System.EventHandler(this.buttonRR_270_Click);
             // 
             // buttonSave
             // 
@@ -141,7 +151,7 @@
             this.buttonSave.TabIndex = 14;
             this.buttonSave.Text = "Zapisz";
             this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.Click += new System.EventHandler(this.button6_Click);
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // labelResolution
             // 
@@ -168,7 +178,6 @@
             this.labelResolutionHeight.Size = new System.Drawing.Size(60, 13);
             this.labelResolutionHeight.TabIndex = 18;
             this.labelResolutionHeight.Text = "Wysokość:";
-            this.labelResolutionHeight.Click += new System.EventHandler(this.labelResolutionHeight_Click);
             // 
             // labelResolutionWidth
             // 
@@ -200,7 +209,6 @@
             0,
             0,
             0});
-            this.numericResolutionHeight.ValueChanged += new System.EventHandler(this.numericResolutionHeight_ValueChanged);
             // 
             // numericResolutionWidth
             // 
@@ -224,14 +232,14 @@
             0,
             0});
             // 
-            // label1
+            // labelScaningType
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(41, 142);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Typ skanowania";
+            this.labelScaningType.AutoSize = true;
+            this.labelScaningType.Location = new System.Drawing.Point(41, 142);
+            this.labelScaningType.Name = "labelScaningType";
+            this.labelScaningType.Size = new System.Drawing.Size(85, 13);
+            this.labelScaningType.TabIndex = 22;
+            this.labelScaningType.Text = "Typ skanowania";
             // 
             // domainScaningSelector
             // 
@@ -243,14 +251,14 @@
             this.domainScaningSelector.TabIndex = 23;
             this.domainScaningSelector.Text = "Tryb skanowania";
             // 
-            // label2
+            // labelSaveFileType
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Typ pliku Wyjściowego";
+            this.labelSaveFileType.AutoSize = true;
+            this.labelSaveFileType.Location = new System.Drawing.Point(27, 192);
+            this.labelSaveFileType.Name = "labelSaveFileType";
+            this.labelSaveFileType.Size = new System.Drawing.Size(116, 13);
+            this.labelSaveFileType.TabIndex = 24;
+            this.labelSaveFileType.Text = "Typ pliku Wyjściowego";
             // 
             // domainFormatSelector
             // 
@@ -265,15 +273,24 @@
             this.domainFormatSelector.TabIndex = 25;
             this.domainFormatSelector.Text = "Format";
             // 
+            // pictureBoxScan
+            // 
+            this.pictureBoxScan.Location = new System.Drawing.Point(195, 12);
+            this.pictureBoxScan.Name = "pictureBoxScan";
+            this.pictureBoxScan.Size = new System.Drawing.Size(593, 426);
+            this.pictureBoxScan.TabIndex = 26;
+            this.pictureBoxScan.TabStop = false;
+            // 
             // SkaningMode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBoxScan);
             this.Controls.Add(this.domainFormatSelector);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelSaveFileType);
             this.Controls.Add(this.domainScaningSelector);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelScaningType);
             this.Controls.Add(this.numericResolutionWidth);
             this.Controls.Add(this.numericResolutionHeight);
             this.Controls.Add(this.labelResolutionWidth);
@@ -292,9 +309,9 @@
             this.Controls.Add(this.buttonScan);
             this.Name = "SkaningMode";
             this.Text = "Skaner";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionWidth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,10 +335,12 @@
         private System.Windows.Forms.Label labelResolutionWidth;
         private System.Windows.Forms.NumericUpDown numericResolutionHeight;
         private System.Windows.Forms.NumericUpDown numericResolutionWidth;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelScaningType;
         private System.Windows.Forms.DomainUpDown domainScaningSelector;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelSaveFileType;
         private System.Windows.Forms.DomainUpDown domainFormatSelector;
+        private System.Windows.Forms.PictureBox pictureBoxScan;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserSavingFile;
     }
 }
 
