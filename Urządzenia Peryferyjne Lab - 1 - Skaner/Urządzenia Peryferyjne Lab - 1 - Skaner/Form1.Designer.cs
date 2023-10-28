@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SkaningMode));
             this.buttonScan = new System.Windows.Forms.Button();
             this.buttonRL_180 = new System.Windows.Forms.Button();
             this.labelRotationLeft = new System.Windows.Forms.Label();
@@ -49,18 +50,26 @@
             this.labelSaveFileType = new System.Windows.Forms.Label();
             this.domainFormatSelector = new System.Windows.Forms.DomainUpDown();
             this.pictureBoxScan = new System.Windows.Forms.PictureBox();
-            this.folderBrowserSavingFile = new System.Windows.Forms.FolderBrowserDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelSkanerName = new System.Windows.Forms.Label();
+            this.SkanerName = new System.Windows.Forms.Label();
+            this.trackBarBrightness = new System.Windows.Forms.TrackBar();
+            this.label2 = new System.Windows.Forms.Label();
+            this.trackBarContrast = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBrightness)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarContrast)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonScan
             // 
-            this.buttonScan.Location = new System.Drawing.Point(19, 758);
-            this.buttonScan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonScan.Location = new System.Drawing.Point(10, 527);
+            this.buttonScan.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonScan.Name = "buttonScan";
-            this.buttonScan.Size = new System.Drawing.Size(149, 44);
+            this.buttonScan.Size = new System.Drawing.Size(74, 23);
             this.buttonScan.TabIndex = 0;
             this.buttonScan.Text = "Skanuj";
             this.buttonScan.UseVisualStyleBackColor = true;
@@ -68,10 +77,10 @@
             // 
             // buttonRL_180
             // 
-            this.buttonRL_180.Location = new System.Drawing.Point(132, 642);
-            this.buttonRL_180.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonRL_180.Location = new System.Drawing.Point(66, 334);
+            this.buttonRL_180.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRL_180.Name = "buttonRL_180";
-            this.buttonRL_180.Size = new System.Drawing.Size(77, 56);
+            this.buttonRL_180.Size = new System.Drawing.Size(38, 29);
             this.buttonRL_180.TabIndex = 5;
             this.buttonRL_180.Text = "180°";
             this.buttonRL_180.UseVisualStyleBackColor = true;
@@ -80,29 +89,29 @@
             // labelRotationLeft
             // 
             this.labelRotationLeft.AutoSize = true;
-            this.labelRotationLeft.Location = new System.Drawing.Point(101, 611);
-            this.labelRotationLeft.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelRotationLeft.Location = new System.Drawing.Point(50, 318);
+            this.labelRotationLeft.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRotationLeft.Name = "labelRotationLeft";
-            this.labelRotationLeft.Size = new System.Drawing.Size(136, 25);
+            this.labelRotationLeft.Size = new System.Drawing.Size(69, 13);
             this.labelRotationLeft.TabIndex = 7;
             this.labelRotationLeft.Text = "Obrót w lewo";
             // 
             // labelRotationRight
             // 
             this.labelRotationRight.AutoSize = true;
-            this.labelRotationRight.Location = new System.Drawing.Point(100, 504);
-            this.labelRotationRight.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelRotationRight.Location = new System.Drawing.Point(50, 262);
+            this.labelRotationRight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRotationRight.Name = "labelRotationRight";
-            this.labelRotationRight.Size = new System.Drawing.Size(150, 25);
+            this.labelRotationRight.Size = new System.Drawing.Size(76, 13);
             this.labelRotationRight.TabIndex = 8;
             this.labelRotationRight.Text = "Obrót w prawo";
             // 
             // buttonRL_90
             // 
-            this.buttonRL_90.Location = new System.Drawing.Point(221, 642);
-            this.buttonRL_90.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonRL_90.Location = new System.Drawing.Point(110, 334);
+            this.buttonRL_90.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRL_90.Name = "buttonRL_90";
-            this.buttonRL_90.Size = new System.Drawing.Size(77, 56);
+            this.buttonRL_90.Size = new System.Drawing.Size(38, 29);
             this.buttonRL_90.TabIndex = 9;
             this.buttonRL_90.Text = "90°";
             this.buttonRL_90.UseVisualStyleBackColor = true;
@@ -110,10 +119,10 @@
             // 
             // buttonRL_270
             // 
-            this.buttonRL_270.Location = new System.Drawing.Point(43, 642);
-            this.buttonRL_270.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonRL_270.Location = new System.Drawing.Point(22, 334);
+            this.buttonRL_270.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRL_270.Name = "buttonRL_270";
-            this.buttonRL_270.Size = new System.Drawing.Size(77, 56);
+            this.buttonRL_270.Size = new System.Drawing.Size(38, 29);
             this.buttonRL_270.TabIndex = 10;
             this.buttonRL_270.Text = "270°";
             this.buttonRL_270.UseVisualStyleBackColor = true;
@@ -121,10 +130,10 @@
             // 
             // buttonRR_90
             // 
-            this.buttonRR_90.Location = new System.Drawing.Point(221, 535);
-            this.buttonRR_90.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonRR_90.Location = new System.Drawing.Point(110, 278);
+            this.buttonRR_90.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRR_90.Name = "buttonRR_90";
-            this.buttonRR_90.Size = new System.Drawing.Size(77, 56);
+            this.buttonRR_90.Size = new System.Drawing.Size(38, 29);
             this.buttonRR_90.TabIndex = 11;
             this.buttonRR_90.Text = "90°";
             this.buttonRR_90.UseVisualStyleBackColor = true;
@@ -132,10 +141,10 @@
             // 
             // buttonRR_180
             // 
-            this.buttonRR_180.Location = new System.Drawing.Point(128, 535);
-            this.buttonRR_180.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonRR_180.Location = new System.Drawing.Point(64, 278);
+            this.buttonRR_180.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRR_180.Name = "buttonRR_180";
-            this.buttonRR_180.Size = new System.Drawing.Size(77, 56);
+            this.buttonRR_180.Size = new System.Drawing.Size(38, 29);
             this.buttonRR_180.TabIndex = 12;
             this.buttonRR_180.Text = "180°";
             this.buttonRR_180.UseVisualStyleBackColor = true;
@@ -143,10 +152,10 @@
             // 
             // buttonRR_270
             // 
-            this.buttonRR_270.Location = new System.Drawing.Point(43, 535);
-            this.buttonRR_270.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonRR_270.Location = new System.Drawing.Point(22, 278);
+            this.buttonRR_270.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonRR_270.Name = "buttonRR_270";
-            this.buttonRR_270.Size = new System.Drawing.Size(77, 56);
+            this.buttonRR_270.Size = new System.Drawing.Size(38, 29);
             this.buttonRR_270.TabIndex = 13;
             this.buttonRR_270.Text = "270°";
             this.buttonRR_270.UseVisualStyleBackColor = true;
@@ -154,10 +163,10 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(192, 758);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.buttonSave.Location = new System.Drawing.Point(98, 527);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(149, 44);
+            this.buttonSave.Size = new System.Drawing.Size(74, 23);
             this.buttonSave.TabIndex = 14;
             this.buttonSave.Text = "Zapisz";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -166,85 +175,84 @@
             // labelResolution
             // 
             this.labelResolution.AutoSize = true;
-            this.labelResolution.Location = new System.Drawing.Point(101, 65);
-            this.labelResolution.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelResolution.Location = new System.Drawing.Point(50, 34);
+            this.labelResolution.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelResolution.Name = "labelResolution";
-            this.labelResolution.Size = new System.Drawing.Size(151, 25);
+            this.labelResolution.Size = new System.Drawing.Size(75, 13);
             this.labelResolution.TabIndex = 15;
             this.labelResolution.Text = "Rozdzielczość";
             // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(5, 1041);
+            this.splitter1.Size = new System.Drawing.Size(2, 642);
             this.splitter1.TabIndex = 16;
             this.splitter1.TabStop = false;
             // 
             // labelResolutionHeight
             // 
             this.labelResolutionHeight.AutoSize = true;
-            this.labelResolutionHeight.Location = new System.Drawing.Point(117, 108);
-            this.labelResolutionHeight.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelResolutionHeight.Location = new System.Drawing.Point(58, 56);
+            this.labelResolutionHeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelResolutionHeight.Name = "labelResolutionHeight";
-            this.labelResolutionHeight.Size = new System.Drawing.Size(117, 25);
+            this.labelResolutionHeight.Size = new System.Drawing.Size(60, 13);
             this.labelResolutionHeight.TabIndex = 18;
             this.labelResolutionHeight.Text = "Wysokość:";
             // 
             // labelResolutionWidth
             // 
             this.labelResolutionWidth.AutoSize = true;
-            this.labelResolutionWidth.Location = new System.Drawing.Point(117, 181);
-            this.labelResolutionWidth.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelResolutionWidth.Location = new System.Drawing.Point(58, 94);
+            this.labelResolutionWidth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelResolutionWidth.Name = "labelResolutionWidth";
-            this.labelResolutionWidth.Size = new System.Drawing.Size(113, 25);
+            this.labelResolutionWidth.Size = new System.Drawing.Size(57, 13);
             this.labelResolutionWidth.TabIndex = 19;
             this.labelResolutionWidth.Text = "Szerokość";
             // 
             // numericResolutionHeight
             // 
-            this.numericResolutionHeight.Location = new System.Drawing.Point(60, 136);
-            this.numericResolutionHeight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.numericResolutionHeight.Location = new System.Drawing.Point(30, 71);
+            this.numericResolutionHeight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.numericResolutionHeight.Maximum = new decimal(new int[] {
-            1000,
+            1175,
             0,
             0,
             0});
             this.numericResolutionHeight.Minimum = new decimal(new int[] {
-            100,
+            10,
             0,
             0,
             0});
             this.numericResolutionHeight.Name = "numericResolutionHeight";
-            this.numericResolutionHeight.Size = new System.Drawing.Size(240, 31);
+            this.numericResolutionHeight.Size = new System.Drawing.Size(120, 20);
             this.numericResolutionHeight.TabIndex = 20;
             this.numericResolutionHeight.Value = new decimal(new int[] {
-            1000,
+            1175,
             0,
             0,
             0});
-            this.numericResolutionHeight.ValueChanged += new System.EventHandler(this.numericResolutionHeight_ValueChanged);
             // 
             // numericResolutionWidth
             // 
-            this.numericResolutionWidth.Location = new System.Drawing.Point(60, 211);
-            this.numericResolutionWidth.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.numericResolutionWidth.Location = new System.Drawing.Point(30, 110);
+            this.numericResolutionWidth.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.numericResolutionWidth.Maximum = new decimal(new int[] {
-            800,
+            850,
             0,
             0,
             0});
             this.numericResolutionWidth.Minimum = new decimal(new int[] {
-            100,
+            10,
             0,
             0,
             0});
             this.numericResolutionWidth.Name = "numericResolutionWidth";
-            this.numericResolutionWidth.Size = new System.Drawing.Size(240, 31);
+            this.numericResolutionWidth.Size = new System.Drawing.Size(120, 20);
             this.numericResolutionWidth.TabIndex = 21;
             this.numericResolutionWidth.Value = new decimal(new int[] {
-            700,
+            850,
             0,
             0,
             0});
@@ -252,10 +260,10 @@
             // labelScaningType
             // 
             this.labelScaningType.AutoSize = true;
-            this.labelScaningType.Location = new System.Drawing.Point(83, 272);
-            this.labelScaningType.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelScaningType.Location = new System.Drawing.Point(42, 141);
+            this.labelScaningType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelScaningType.Name = "labelScaningType";
-            this.labelScaningType.Size = new System.Drawing.Size(168, 25);
+            this.labelScaningType.Size = new System.Drawing.Size(85, 13);
             this.labelScaningType.TabIndex = 22;
             this.labelScaningType.Text = "Typ skanowania";
             // 
@@ -263,20 +271,20 @@
             // 
             this.domainScaningSelector.Items.Add("Skanowanie Czarno-Białe");
             this.domainScaningSelector.Items.Add("Kolorowe");
-            this.domainScaningSelector.Location = new System.Drawing.Point(19, 304);
-            this.domainScaningSelector.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.domainScaningSelector.Location = new System.Drawing.Point(10, 158);
+            this.domainScaningSelector.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.domainScaningSelector.Name = "domainScaningSelector";
-            this.domainScaningSelector.Size = new System.Drawing.Size(324, 31);
+            this.domainScaningSelector.Size = new System.Drawing.Size(162, 20);
             this.domainScaningSelector.TabIndex = 23;
             this.domainScaningSelector.Text = "Tryb skanowania";
             // 
             // labelSaveFileType
             // 
             this.labelSaveFileType.AutoSize = true;
-            this.labelSaveFileType.Location = new System.Drawing.Point(53, 369);
-            this.labelSaveFileType.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelSaveFileType.Location = new System.Drawing.Point(26, 192);
+            this.labelSaveFileType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelSaveFileType.Name = "labelSaveFileType";
-            this.labelSaveFileType.Size = new System.Drawing.Size(231, 25);
+            this.labelSaveFileType.Size = new System.Drawing.Size(116, 13);
             this.labelSaveFileType.TabIndex = 24;
             this.labelSaveFileType.Text = "Typ pliku Wyjściowego";
             // 
@@ -287,30 +295,92 @@
             this.domainFormatSelector.Items.Add("TIFF");
             this.domainFormatSelector.Items.Add("BMP");
             this.domainFormatSelector.Items.Add("REL");
-            this.domainFormatSelector.Location = new System.Drawing.Point(60, 418);
-            this.domainFormatSelector.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.domainFormatSelector.Location = new System.Drawing.Point(30, 217);
+            this.domainFormatSelector.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.domainFormatSelector.Name = "domainFormatSelector";
-            this.domainFormatSelector.Size = new System.Drawing.Size(240, 31);
+            this.domainFormatSelector.Size = new System.Drawing.Size(120, 20);
             this.domainFormatSelector.TabIndex = 25;
             this.domainFormatSelector.Text = "Format";
-            this.domainFormatSelector.SelectedItemChanged += new System.EventHandler(this.domainFormatSelector_SelectedItemChanged);
             // 
             // pictureBoxScan
             // 
-            this.pictureBoxScan.Location = new System.Drawing.Point(389, 15);
-            this.pictureBoxScan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.pictureBoxScan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxScan.BackgroundImage")));
+            this.pictureBoxScan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxScan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxScan.Location = new System.Drawing.Point(194, 8);
+            this.pictureBoxScan.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBoxScan.Name = "pictureBoxScan";
-            this.pictureBoxScan.Size = new System.Drawing.Size(820, 1002);
+            this.pictureBoxScan.Size = new System.Drawing.Size(543, 622);
             this.pictureBoxScan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxScan.TabIndex = 26;
             this.pictureBoxScan.TabStop = false;
-            this.pictureBoxScan.Click += new System.EventHandler(this.pictureBoxScan_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(69, 451);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Kontrast";
+            // 
+            // labelSkanerName
+            // 
+            this.labelSkanerName.AutoSize = true;
+            this.labelSkanerName.Location = new System.Drawing.Point(27, 574);
+            this.labelSkanerName.Name = "labelSkanerName";
+            this.labelSkanerName.Size = new System.Drawing.Size(125, 13);
+            this.labelSkanerName.TabIndex = 28;
+            this.labelSkanerName.Text = "Połączono ze skanerem:";
+            // 
+            // SkanerName
+            // 
+            this.SkanerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.SkanerName.Location = new System.Drawing.Point(19, 599);
+            this.SkanerName.Name = "SkanerName";
+            this.SkanerName.Size = new System.Drawing.Size(160, 31);
+            this.SkanerName.TabIndex = 29;
+            this.SkanerName.Text = "BRAK";
+            this.SkanerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // trackBarBrightness
+            // 
+            this.trackBarBrightness.Location = new System.Drawing.Point(12, 403);
+            this.trackBarBrightness.Maximum = 1000;
+            this.trackBarBrightness.Minimum = -1000;
+            this.trackBarBrightness.Name = "trackBarBrightness";
+            this.trackBarBrightness.Size = new System.Drawing.Size(160, 45);
+            this.trackBarBrightness.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(61, 376);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Jasność";
+            // 
+            // trackBarContrast
+            // 
+            this.trackBarContrast.Location = new System.Drawing.Point(10, 467);
+            this.trackBarContrast.Maximum = 1000;
+            this.trackBarContrast.Minimum = -1000;
+            this.trackBarContrast.Name = "trackBarContrast";
+            this.trackBarContrast.Size = new System.Drawing.Size(162, 45);
+            this.trackBarContrast.TabIndex = 32;
             // 
             // SkaningMode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 1041);
+            this.ClientSize = new System.Drawing.Size(748, 642);
+            this.Controls.Add(this.trackBarContrast);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.trackBarBrightness);
+            this.Controls.Add(this.SkanerName);
+            this.Controls.Add(this.labelSkanerName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBoxScan);
             this.Controls.Add(this.domainFormatSelector);
             this.Controls.Add(this.labelSaveFileType);
@@ -332,13 +402,15 @@
             this.Controls.Add(this.labelRotationLeft);
             this.Controls.Add(this.buttonRL_180);
             this.Controls.Add(this.buttonScan);
-            this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "SkaningMode";
             this.Text = "Skaner";
             this.Load += new System.EventHandler(this.SkaningMode_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericResolutionWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxScan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarBrightness)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBarContrast)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,7 +439,14 @@
         private System.Windows.Forms.Label labelSaveFileType;
         private System.Windows.Forms.DomainUpDown domainFormatSelector;
         private System.Windows.Forms.PictureBox pictureBoxScan;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserSavingFile;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSkanerName;
+        private System.Windows.Forms.Label SkanerName;
+        private System.Windows.Forms.TrackBar trackBarBrightness;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TrackBar trackBarContrast;
     }
 }
+
 
