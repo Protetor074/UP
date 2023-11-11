@@ -1,0 +1,45 @@
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.csproj.AssemblyReference.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.csproj.SuggestedBindingRedirects.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Interop.WIA.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.csproj.ResolveComReference.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa.Form1.resources
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa.Properties.Resources.resources
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.csproj.GenerateResource.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.csproj.CoreCompileInputs.cache
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.exe.config
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.exe
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.pdb
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Buffers.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Memory.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.ValueTuple.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.Core.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.ComDlg32.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Gdi32.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Kernel32.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Multimedia.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Shared.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.User32.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Buffers.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Memory.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\System.ValueTuple.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.Core.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.ComDlg32.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Gdi32.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Kernel32.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Multimedia.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.Shared.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\Vanara.PInvoke.User32.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\fr\Vanara.Core.resources.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.csproj.CopyComplete
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.exe
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\obj\Debug\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa.pdb
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\AForge.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\AForge.Video.dll
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\AForge.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\AForge.Video.xml
+C:\Users\alfag\OneDrive\Pulpit\Projekty\UP\Urządzenia Peryferyjne Lab - 3 - Kamera internetowa\Urządzenia Peryferyjne Lab - 1 - Kamera internetowa\bin\Debug\AForge.Video.DirectShow.xml
