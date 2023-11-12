@@ -146,23 +146,42 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
 
         public partial class WebCamControl
         {
-            private const int WM_CAP = 0x400;
-            private const int WM_CAP_DRIVER_CONNECT = 0x40a;
-            private const int WM_CAP_DRIVER_DISCONNECT = 0x40b;
-            private const int WM_CAP_EDIT_COPY = 0x41e;
-            private const int WM_CAP_GET_FRAME = 1084;
-            private const int WM_CAP_COPY = 1054;
-            private const int WM_CAP_SET_PREVIEW = 0x432;
-            private const int WM_CAP_SET_OVERLAY = 0x433;
-            private const int WM_CAP_SET_PREVIEWRATE = 0x434;
-            private const int WM_CAP_SET_SCALE = 0x435;
+            // Początkowy kod dla systemu zarządzania przechwytywaniem (Windows Multimedia API).
+            private const int WM_CAP_START = 0x400;
+            // Okno jest potomkiem, używane jako flaga dla funkcji określającej styl okna.
             private const int WS_CHILD = 0x40000000;
+            // Okno jest widoczne, używane jako flaga dla funkcji określającej styl okna.
             private const int WS_VISIBLE = 0x10000000;
+
+            // Żądanie połączenia z urządzeniem do przechwytywania wideo.
+            private const int WM_CAP_DRIVER_CONNECT = 0x40a;
+            // Żądanie rozłączenia z urządzeniem do przechwytywania wideo.
+            private const int WM_CAP_DRIVER_DISCONNECT = 0x40b;
+            // Kopiowanie obrazu do schowka.
+            private const int WM_CAP_COPY = 0x41e;
+            // Rozpoczęcie sekwencji przechwytywania klatek.
+            private const int WM_CAP_SEQUENCE = WM_CAP_START + 62;
+            // Żądanie zapisania przechwyconego materiału wideo do pliku.
+            private const int WM_CAP_FILE_SAVEAS = WM_CAP_START + 23;
+
+            // Ustawienie skali obrazu do podglądu lub przechwytywania.
+            private const int WM_CAP_SET_SCALE = 0x435;
+            // Ustawienie szybkości podglądu.
+            private const int WM_CAP_SET_PREVIEWRATE = 0x434;
+            // Włączenie lub wyłączenie podglądu.
+            private const int WM_CAP_SET_PREVIEW = 0x432;
+            // Pobranie pojedynczej klatki obrazu.
+            private const int WM_CAP_GET_FRAME = 1084;
+
+            //private const int WM_CAP_SET_OVERLAY = 0x433;
+
+            // Nie przemieszczaj okna podczas zmiany rozmiaru lub układu.
             private const int SWP_NOMOVE = 0x2;
+            // Nie zmieniaj położenia okna w stosunku do innych okien.
             private const int SWP_NOZORDER = 0x4;
+            // Okno jest na najniższym poziomie w stosie okien. 
             private const int HWND_BOTTOM = 1;
-            private const int WM_CAP_SEQUENCE = WM_CAP + 62;
-            private const int WM_CAP_FILE_SAVEAS = WM_CAP + 23;
+            
 
 
 
@@ -178,6 +197,7 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
             [DllImport("avicap32.dll")]
             protected static extern int capCreateCaptureWindowA([MarshalAs(UnmanagedType.VBByRefStr)] ref string lpszWindowName,
                 int dwStyle, int x, int y, int nWidth, int nHeight, int hWndParent, int nID);
+            
 
             //This function enables set changes to the size, position, and Z order of a child window
             //Ta funkcja umożliwia ustawienie zmian w rozmiarze, położeniu i kolejności Z okna podrzędnego
@@ -237,10 +257,12 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
             /// Funkcja używana do wyświetlania sygnału wyjściowego z urządzenia do przechwytywania wideo, którą należy utworzyć
             /// okno przechwytywania.
             /// </summary>
+
+            IntPtr oHandle;
             public void OpenConnection(PictureBox pictureBox)
             {
                 string DeviceIndex = Convert.ToString(DeviceID);
-                IntPtr oHandle = pictureBox.Handle;
+                oHandle = pictureBox.Handle;
 
                 // Otwórz okno podglądu w PictureBox.
                 // Utwórz okno potomne za pomocą capCreateCaptureWindowA, aby móc je wyświetlić w ramce graficznej.
@@ -254,7 +276,7 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
                     // Ustaw skalę podglądu
                     SendMessage(hHwnd, WM_CAP_SET_SCALE, -1, 0);
                     // Ustaw częstotliwość podglądu w milisekundach
-                    SendMessage(hHwnd, WM_CAP_SET_PREVIEWRATE, 100, 0);
+                    SendMessage(hHwnd, WM_CAP_SET_PREVIEWRATE, 50, 0);
                     // Rozpocznij podgląd obrazu z kamery
                     SendMessage(hHwnd, WM_CAP_SET_PREVIEW, -1, 0);
                     // Zmień rozmiar okna, aby zmieściło się w ramce graficznej
@@ -319,6 +341,11 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
                     return;
                 }
                 SendMessage(hHwnd, WM_CAP_SEQUENCE, 0, 0);
+                if (SendMessage(hHwnd, WM_CAP_DRIVER_CONNECT, 0, 0) != 0)
+                {
+                    SendMessage(hHwnd, WM_CAP_SEQUENCE, 0, 0);
+                }
+
                 isRecording = true;
             }
 
@@ -331,7 +358,7 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
                     return;
                 }
 
-                
+
                 string path;
 
                 saveFileDialog.Filter = "AVI Files (*.avi)|*.avi|All files (*.*)|*.*"; // Ustaw filtr plików
@@ -348,29 +375,23 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
                     return;
                 }
 
-                Console.WriteLine(path);
-                if (File.Exists(path))
-                    File.Delete(path);
-                if (SendMessage(hHwnd, WM_CAP_FILE_SAVEAS, 0, path) == 0)
+
+
+                try
                 {
-                    int errorCode = Marshal.GetLastWin32Error();
-                    Console.WriteLine($"Błąd podczas zapisywania pliku. Kod błędu: {errorCode}");
-                    return;
+                    SendMessage(hHwnd, WM_CAP_FILE_SAVEAS, 0, path);
+                    SendMessage(hHwnd, WM_CAP_DRIVER_DISCONNECT, 0, 0);
+                    Console.WriteLine("Film Zapisany");
+
                 }
-                //SendMessage(hHwnd, WM_CAP_FILE_SAVEAS, 0, path);
-
-                // Zatrzymaj nagrywanie
-                SendMessage(hHwnd, WM_CAP_DRIVER_DISCONNECT, 0, 0);
-                isRecording = false;
-
-                
-
-                DestroyWindow(hHwnd);
-
-                isRecording = false;
-                Console.WriteLine("Zakończono nagrywanie.");
-                
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    Console.WriteLine(path + ": " + ex.Message);
+                }
             }
+
+                
 
             private Bitmap previousFrame;
             Timer motionDetectionTimer;
@@ -414,8 +435,10 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
                     // Możesz dodać dodatkową logikę w zależności od tego, czy wykryto ruch
                     if (motionDetected)
                     {
-                        Console.WriteLine("Wykryto ruch!");
-                        // Tutaj możesz podjąć odpowiednie działania w przypadku wykrycia ruchu
+                        //Console.WriteLine("Wykryto ruch!");
+                        // Tutaj można podjąć odpowiednie działania w przypadku wykrycia ruchu
+                        motionDetectionLabel.ForeColor = Color.Red;
+                        motionDetectionLabel.Text = "!!!Wykryto ruch!!!";
                     }
                 }
 
@@ -425,14 +448,13 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
 
             private bool DetectMotion(Bitmap previousFrame, Bitmap currentFrame)
             {
-                // Implementacja algorytmu detekcji ruchu (np. różnica klatek)
+                int changedPixels = 0;
+                int totalPixels = currentFrame.Width * currentFrame.Height;
 
-                // Tutaj możesz użyć różnych algorytmów, na przykład:
-                // - Różnica pikseli
-                // - Porównywanie histogramów
-                // - Algorytmy oparte na ruchu optycznym, itp.
+                // Próg detekcji - ustaw na 5% zmiany jako przykład
+                int detectionThreshold = (int)(totalPixels * detectionLevel / 100.0);
 
-                // W tym przykładzie użyjemy prostego porównania pikseli
+                // Iteracja po pikselach
                 for (int x = 0; x < currentFrame.Width; x++)
                 {
                     for (int y = 0; y < currentFrame.Height; y++)
@@ -440,24 +462,25 @@ namespace Urządzenia_Peryferyjne_Lab___1___Kamera_internetowa
                         Color previousPixel = previousFrame.GetPixel(x, y);
                         Color currentPixel = currentFrame.GetPixel(x, y);
 
-                        // Porównaj piksele - jeśli występuje różnica, uznaj to za ruch
-                        if (Math.Abs(previousPixel.R - currentPixel.R) > detectionLevel ||
-                            Math.Abs(previousPixel.G - currentPixel.G) > detectionLevel ||
-                            Math.Abs(previousPixel.B - currentPixel.B) > detectionLevel)
+                        // Porównanie pikseli
+                        if (Math.Abs(previousPixel.R - currentPixel.R) > 10 ||
+                            Math.Abs(previousPixel.G - currentPixel.G) > 10 ||
+                            Math.Abs(previousPixel.B - currentPixel.B) > 10)
                         {
-                            //Console.WriteLine(Math.Abs(previousPixel.R - currentPixel.R));
-                            //Console.WriteLine(Math.Abs(previousPixel.G - currentPixel.G));
-                            //Console.WriteLine(Math.Abs(previousPixel.B - currentPixel.B));
-
-                            motionDetectionLabel.ForeColor = Color.Red;
-                            motionDetectionLabel.Text = "!!!Wykryto ruch!!!";
-                            return true; // Wykryto ruch
-
+                            changedPixels++;
                         }
                     }
                 }
+
+                // Jeśli liczba zmienionych pikseli przekracza próg detekcji, uznaj to za ruch
+                if (changedPixels >= detectionThreshold)
+                {
+                    return true; // Wykryto ruch
+                }
+
                 motionDetectionLabel.Text = "";
                 return false; // Brak ruchu
+
             }
 
             ~WebCamControl()

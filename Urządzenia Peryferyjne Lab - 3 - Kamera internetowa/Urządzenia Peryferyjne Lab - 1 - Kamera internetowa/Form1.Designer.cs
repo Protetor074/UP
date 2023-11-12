@@ -158,13 +158,8 @@
             0,
             0});
             this.numericUpDownMoutionDetectionVal.Location = new System.Drawing.Point(37, 287);
-            this.numericUpDownMoutionDetectionVal.Maximum = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
             this.numericUpDownMoutionDetectionVal.Minimum = new decimal(new int[] {
-            20,
+            1,
             0,
             0,
             0});
@@ -172,7 +167,7 @@
             this.numericUpDownMoutionDetectionVal.Size = new System.Drawing.Size(62, 20);
             this.numericUpDownMoutionDetectionVal.TabIndex = 11;
             this.numericUpDownMoutionDetectionVal.Value = new decimal(new int[] {
-            100,
+            5,
             0,
             0,
             0});
@@ -188,7 +183,7 @@
             // 
             // labelMoutionDetect
             // 
-            this.labelMoutionDetect.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelMoutionDetect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelMoutionDetect.Location = new System.Drawing.Point(13, 310);
             this.labelMoutionDetect.Name = "labelMoutionDetect";
             this.labelMoutionDetect.Size = new System.Drawing.Size(113, 31);
